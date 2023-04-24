@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/* GENERAL STYLES */
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+.title {
+    font-size: 58px;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Sedgwick Ave Display', cursive;
+    margin-right: 24px;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    width: 100%;
+    max-width: 1000px;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.nav_links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_link {
+    margin: 0 24px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav_link--anchor {
+    text-decoration: none;
+    font-size: 24px;
+    color: #fff;
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+
+.link_hover--effect:after {
+    background-color: #fff;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 3px;
+    bottom: -3px;
+    right: 0;
+    transition: all 300ms ease;
+}
+
+.link_hover--effect:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.sign {
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}
+
+.button {
+    padding: 12px 40px;
+    background-color: rgb(76, 10, 76);
+    box-shadow: 0 0 5px rgb(137, 22, 137);
+    border-radius: 12px;
+    font-size: 16px;
+    display: flex;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.04);
+}
+
+.reference {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+}
+
+/* ABOUT */
+
+#about {
+    min-height: 100vh;
+    background-color: #191919;
+}
+
+/* HEADER */
+
+header {
+    background-color: orange;
+    height: calc(100vh - 100px)
+}
+
+/* SignUp box*/ 
+
+#signUp_box {
+    background-color: white;
+    width: 550px;
+    height: 600px;
+    padding: 12px;
+    box-shadow: 0 0 5px black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.visibility {
+    visibility: hidden;
+}
+
+label {
+    font-size: 24px;
+}
+
+/* SCROLL EFFECT */
+
+.scroll {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.scroll__icon {
+    width: 20px;
+    height: 30px;
+    border-radius: 12px;
+    border: 2px solid #242424;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll__icon:after {
+    content: "";
+    background-color: #242424;
+    width: 4px;
+    height: 6px;
+    border-radius: 2px;
+    animation: scroll 1000ms infinite alternate-reverse;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(3px);
+    }
+
+    100% {
+        transform: translateY(-3px);
+    }
+}
